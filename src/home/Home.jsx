@@ -13,7 +13,7 @@ function Home() {
     //Function to fetch movies
     const fetchMovies = async () => {
         try {
-            const res = await axios.get(`http://www.omdbapi.com/?s=${search}&apikey=${api_key}`)
+            const res = await axios.get(`https://www.omdbapi.com/?s=${search}&apikey=${api_key}`)
             // console.log(res.data.Response)
             if (res.data.Response === 'True') {
                 setMovieData(res.data.Search)
